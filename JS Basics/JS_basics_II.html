@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+
+function magic_multiply(x, y) {
+
+        // 2
+		if (x === 0 && y === 0) {
+			return "All inputs 0";
+		}
+
+        // 3
+		if (x.constructor === Array) {
+			for (let i = 0; i < x.length; i++) {
+				x[i] = x[i] * y
+			}
+			return x;
+		}
+
+        // 4
+		if (y.constructor === String) {
+			return "Error: Can not multiply by string";
+		}
+
+        // 5
+		if (x.constructor === String) {
+			let newString = "";
+			for (let i = 0; i<y; i++) {
+				newString += x;
+			}
+			return newString;
+		}
+
+		// 1
+		return x * y;
+	}
+
+
+
+    // TEST 1
+    let test1 = magic_multiply(5, 2);
+    console.log(test1);
+    // // => 10
+
+    // TEST 2
+    let test2 = magic_multiply(0, 0);
+    console.log(test2);
+    // => "All inputs 0"
+
+    // TEST 3
+    let test3 = magic_multiply([1, 2, 3], 2);
+    console.log(test3);
+    // // => [2, 4, 6]
+
+    // TEST 4
+    let test4 = magic_multiply(7, "three");
+    console.log(test4);
+    // // => "Error: Can not multiply by string"
+
+    // TEST 5
+    let test5 = magic_multiply("Brendo", 4);
+    console.log(test5);
+    // => "BrendoBrendoBrendoBrendo"
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
