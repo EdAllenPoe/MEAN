@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Objects</title>
+
+  <script type="text/javascript">
+
+  // START MY CODE
+
+//   Challenge 1
+// Print all of the students and their cohort.
+
+let students = [
+    {name: 'Remy', cohort: 'Jan'},
+    {name: 'Genevieve', cohort: 'March'},
+    {name: 'Chuck', cohort: 'Jan'},
+    {name: 'Osmund', cohort: 'June'},
+    {name: 'Nikki', cohort: 'June'},
+    {name: 'Boris', cohort: 'June'}
+];
+
+console.log(students[0].name);
+
+for (let student in students){
+  console.log("Name:",students[student].name, "Cohort:",students[student].cohort);
+}
+
+// Challenge 2
+// Print out the below object to match the example.
+
+let users = {
+    employees: [
+        {'first_name':  'Miguel', 'last_name' : 'Jones'},
+        {'first_name' : 'Ernie', 'last_name' : 'Bertson'},
+        {'first_name' : 'Nora', 'last_name' : 'Lu'},
+        {'first_name' : 'Sally', 'last_name' : 'Barkyoumb'}
+    ],
+    managers: [
+       {'first_name' : 'Lillian', 'last_name' : 'Chambers'},
+       {'first_name' : 'Gordon', 'last_name' : 'Poe'}
+    ]
+ };
+
+ for (let position in users){
+   console.log("employees")
+
+  //  !!!!!....HOW TO PULL OUT THE NAME OF ROOT ARRAY?? !!!!
+
+  // !!!!! NESTED LOOP NOT WORKING!!!!
+
+   for(let title in users[position]){
+     console.log(users[position][title].last_name,",",users[position][title].first_name,
+     );
+   }
+
+
+  //  console.log(users[position][0].first_name);
+
+ }
+
+// END MY CODE
+
+
+  </script>
+  </head>
+  <body>
+
+  </body>
+</html>
